@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sync-Era Portal</title>
+    <link rel="stylesheet" href="./Styles/OnlineCoursePortal.css">
+    <script src="./Script/OnlineCoursePortal.js"></script>
+</head>
+<body>
+    <!--Homepage to choose between New user and Exisiting User-->
+    <div id="Homepage">
+        <h1>Welcome</h1>
+        <input type="button" name="New User Registration" id="NewUserReg" onclick="UserRegPage()" value="New User"><span></span>
+        <input type="button" name="Existing User" id="ExistUser" onclick="LoginPage()" value="Existing User">
+    </div>
+    <!--New User Registration Page-->
+    <div id="UserRegPage" class="Display">
+        <h1>User Registration</h1>
+        <label>Enter Your Name</label>
+        <input type="text"  id="Usernameinp" placeholder="Name" ><br><br>
+        <label>Enter Your Age</label>
+        <input type="number"  id="Ageinp" placeholder="Age"><br><br>
+        <label>Enter Your Phone Number</label>
+        <input type="number"  id="Phonenumberinp" ><br><br>
+        <input type="button"  id="Sign-Up" onclick="SignUp()" value="Sign_Up">
+    </div>
+    <!--Login Page for Exisiting Users-->
+    <div id="LoginPage" class="Display">
+        <h1> Login Here !</h1>
+        <label>Enter Your Phone Number</label>
+        <input type="text"  id="UserIdinp" placeholder="SE-1234"><br><br>
+        <input type="button"  id="Login" onclick="LoginValidate()" value="Login">
+        <label id="ExistingUsers">Existing user :-</label><br>
+    </div>
+    <!--Courses UI-->
+    <div id="CourseUI" class="Display">
+        <h1>Choose Your Option and Get Started Learning</h1>
+        <input type="button"  id="CourseSelection" onclick="CoursesAvailable()" value="Course-Selection">
+        <input type="button"  id="EnrolledCourses" onclick="EnrolledCourses()" value="Enrolled-Courses">
+    </div>
+    <!--Courses Available Page-->
+    <div id="CoursesAvailable" class="Display">
+        <h1>Available Courses</h1>
+        <label>Select Course on Drop Down Below</label><br>
+        <select ID="courseinp">
+            <option>----</option>
+            <option>c#</option>
+            <option>JAVA</option>
+            <option>PYTHON</option>
+            <option>C++</option>
+            <option>TYPESCRIPT</option>
+        </select><br><br>
+        <label>Enter Course Duration</label><br>
+        <input type="number"  id="CourseDuration" placeholder="Enter CourseDur in Months">
+        <input type="button"  id="Enroll" onclick="enrollvalidate()" value="Enroll">
+    </div>
+    <!--Enrolled Courses-->
+    <div id="Enrolled" class="Display">
+        <h1>Pre-Enrolled Courses </h1>
+        <p>Your Enrolled Courses :-</p>
+        <label id="hist">Courses Enrolled :</label>
+        <label id="totaldur">Total Duration :</label>
+        <input type="button" id="Home" onclick="HomePage()" value="Home">
+    </div>
+</body>
+</html>
